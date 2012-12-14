@@ -1,0 +1,17 @@
+---
+applications:
+  .:
+    name: thinkup-test
+    framework:
+      name: php
+      info:
+        mem: 128M
+        description: PHP Application
+        exec: 
+    infra: aws
+    url: ${name}.${target-base}
+    mem: 256M
+    instances: 1
+    services:
+      name:${name}
+        type: mysql

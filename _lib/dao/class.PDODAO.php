@@ -207,6 +207,8 @@ abstract class PDODAO {
             } else {
                 $exception_details .=
                 ' To see the technical details of what went wrong, set debug = true in ThinkUp\'s config file.';
+                throw new ConfigurationException("ThinkUp may not be installed! ".
+                "Try installing ThinkUp.");
             }
             throw new PDOException ($exception_details);
         }
